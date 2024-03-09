@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psuedo selectors</title>
+    <style>
+        .container{
+            border: 2px solid rgb(190, 186, 233);
+            background-color: rgb(216, 247, 247);
+            padding: 34px;
+            margin: 34px auto;
+            width: 666px;
+        }
+        a{
+            text-decoration:none;
+            color: black;
+            background-color: rgb(215, 205, 240);
+            border: 2px solid rgb(91, 79, 182);
+            border-radius: 4px;
+        }
+        /* what happen when pointer comes on botton */
+        a:hover{
+            color: blue;
+            background-color: cadetblue;
+            border: 2px solid rgb(47, 50, 255);
+            border-radius: 4px;
+        }
+        /* what happen when button is visited */
+        a:visited{
+            background-color: yellow;
+    
+        }
+        /* what happen when button is active */
+        a:active{
+            background-color: darkcyan;
+        }
+        .btn{
+            font-family: serif;
+            font-weight: bold;
+            background-color:seagreen;
+            padding: 6px;
+            border: none;
+            cursor: pointer;
+            font-size: 13px;
+            border-radius: 4px;
+        }
+        .btn:hover{
+            color: blue;
+            background-color: cadetblue;
+            border: 2px solid rgb(47,50,255);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container" id="cont1">
+        <h3>This is my heading</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam sunt fugiat incidunt eligendi optio
+            necessitatibus expedita, repellendus impedit corrupti voluptatem autem omnis quidem itaque! Sapiente ipsa
+            culpa soluta veritatis molestiae nihil accusantium porro ratione.</p>
+            <a href="https://google.com" class="btn">Read more</a>
+            <button class="btn">Contact us</button>
+
+    </div>
+</body>
+
+</html>

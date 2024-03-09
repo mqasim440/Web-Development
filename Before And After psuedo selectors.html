@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and after psuedo selectors</title>
+    <style>
+        body {
+            font-family: serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+            background-color: black;
+        }
+
+        header::before {
+            background: url('img/bak.jpg')no-repeat center center/cover;
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.7;
+        }
+
+        .navigation {
+            font-size: 18px;
+            display: flex;
+            border: 2px solid white;
+            background-color: black;
+            border-radius: 49px;
+        }
+
+        li {
+            list-style: none;
+            /* padding: 9px 26px; */
+            /* background-color: seagreen; */
+        }
+
+        section {
+            height: 344px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 3px 230px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 4rem;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .search input {
+            float: right;
+            color: rgb(18, 13, 13);
+            padding: 11px 73px;
+            margin: -68px 13px;
+            border: 2px solid black;
+            border-radius: 47px
+        }
+
+        .item {
+            background-color: seagreen;
+            margin: auto 5px;
+            border: 6px solid black;
+            border-radius: 128px;
+            padding: 11px 27px
+        }
+        .item:hover{
+            background-color: rgb(78, 174, 119);
+        }
+
+
+        /* section::after{
+            content:"this is a COntent";
+         } */
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <ul class="navigation">
+                <li class="item">Home</li>
+                <li class="item">About</li>
+                <li class="item">Services</li>
+                <li class="item">Contact Us</li>
+
+            </ul>
+            <div class="search">
+                <input type="text" id="search" name="search" placeholder="search this website">
+            </div>
+
+        </nav>
+    </header>
+    <section>
+        <h1>Welcome to coding World</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quia neque voluptas possimus labore
+            provident adipisci consequatur quos fugiat? Numquam, commodi amet sequi dolorem quod eum deserunt.
+            Asperiores sint voluptas saepe. Molestias, enim magni?</p>
+    </section>
+</body>
+
+</html>

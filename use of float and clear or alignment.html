@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alignment</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            font-style: italic;
+        }
+
+        .container {
+            width: 900px;
+            border: 3px solid purple;
+            background-color: sandybrown;
+            margin: auto;
+        }
+
+        .item {
+            border: 3px solid #87179d;
+            margin: 12px 3px;
+            padding: 6px 3px;
+            background: rgb(248, 238, 238);
+        }
+
+        #friuts {
+            /* float: left; */
+            float: right;
+            width: 48%;
+            border-radius: 23px;
+        }
+
+        #computers {
+            /* float:right ; */
+            float: left;
+            width: 48%;
+            padding: 46px 1px;
+            border-radius: 23px;
+        }
+
+        #stationary {
+            /* float: left; */
+            /* float: right; */
+            /* clear: left; */
+            /* clear: right; */
+            clear: both;
+            width: 98%;
+            margin-left:9px;;
+            margin-right: 0px;
+        }
+        #glasses{
+            /* float: left; */
+            /* float: right; */
+            /* clear: left; */
+            /* clear: right; */
+            width: 98%;
+            margin:auto;
+        }
+        p,h3{
+            /* text-align: right; */
+            /* text-align: center; */
+            /* text-align: left; */
+            text-align:justify;
+        }
+        h3{
+            text-align: center;
+        }
+        h1{
+            margin:auto;
+            width: 455px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to my Store</h1>
+        <div id="friuts" class="item">
+            <h3>Friuts</h3>
+            <p id="friutspara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat repellendus
+                facilis cupiditate placeat tenetur dolorem debitis soluta voluptas odit totam quasi numquam
+                necessitatibus accusantium recusandae, asperiores in odio suscipit natus ratione eligendi! Harum,
+                facilis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo perferendis facilis dolorem
+                expedita dicta velit fugiat debitis sequi. Quo reprehenderit nulla porro vero modi officia odio cumque
+                expedita commodi iure!</p>
+
+        </div>
+        <div id="computers" class="item">
+            <h3>Computers</h3>
+            <p id="computerspara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+                repellendus
+                facilis cupiditate placeat tenetur dolorem debitis soluta voluptas odit totam quasi numquam
+                necessitatibus accusantium recusandae, asperiores in odio suscipit natus ratione eligendi! Harum,
+                facilis.</p>
+
+        </div>
+        <div id="stationary" class="item">
+            <h3>stationary</h3>
+            <p id="stationarypara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+                repellendus
+                facilis cupiditate placeat tenetur dolorem debitis soluta voluptas odit totam quasi numquam
+                necessitatibus accusantium recusandae, asperiores in odio suscipit natus ratione eligendi! Harum,
+                facilis.</p>
+
+        </div>
+        <div id="glasses" class="item">
+            <h3>Glasses</h3>
+            <p id="glassespara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat repellendus
+                facilis cupiditate placeat tenetur dolorem debitis soluta voluptas odit totam quasi numquam
+                necessitatibus accusantium recusandae, asperiores in odio suscipit natus ratione eligendi! Harum,
+                facilis.</p>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

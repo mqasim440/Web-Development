@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur fugiat reiciendis iusto veritatis dicta
+            doloremque modi assumenda, amet sint asperiores debitis cupiditate quidem ab aut doloribus at repellat
+            minus? Sed mollitia laudantium eveniet eius quae enim quod quo soluta unde temporibus voluptatem, odio
+            ipsum. Officia nostrum amet sequi eum laboriosam.
+        </div>
+    </div>
+    <script>
+        var str="This is a string.";
+        console.log(str);
+        //first occurence of a substring
+        var position=str.indexOf('is');
+        console.log(`index of 'is' is:${position}`);
+
+        //Last occurence of a substring
+        var position=str.lastIndexOf('is');
+        console.log(`last index of 'is' is:${position}`);
+
+        //substring from a string
+        var substr=str.slice(1,7);//This include space also and show letters between the given slicing numbers
+        console.log(substr);
+
+        var substr1=str.substr(1,3);
+        console.log(substr1);
+
+        var replaced=str.replaced('string','Qasim');
+        console.log(str);
+        console.log(replaced);
+    </script>
+</body>
+
+</html>

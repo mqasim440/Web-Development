@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes and nth psuedo selectors</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background-color: rgb(34, 33, 33);
+            width: 100%;
+            height: 100%;
+            background: url('img/bak.jpg')no-repeat center center/cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+          
+
+        }
+
+        .container {
+       
+            padding: 12px 184px;
+            display: block;
+            width: 291px;
+            margin: 20px auto;
+            border: 2px solid white;
+            border-radius: 271px;
+            justify-content: center;
+            background-color:black;
+        }
+
+        input {
+            display: block;
+            margin: auto 2px;
+        }
+
+        .form-control input {
+            color: black;
+            width: 136%;
+            font-style: italic;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-align: center;
+            font-size: 17px;
+            padding: 4px 2px;
+            border: 2px solid black;
+            align-items: center;
+            background-color: khaki;
+            font-weight: bold;
+            margin: 2px 2px;
+            border-radius: 20px;
+        }
+
+        .item {
+            display: block;
+        }
+
+        a[target='_blank'] {
+            font-size: 44px;
+            color: violet;
+            font-style: italic;
+            text-decoration: none;
+            border-radius: 47px;
+            border: 2px solid black;
+            background-color: seagreen;
+        }
+
+        a[target]:hover {
+            background-color: blue;
+        }
+
+        .container a[target] {
+            text-align: center;
+        }
+
+        a[target='_self'] {
+            font-size: 44px;
+            color: black;
+            font-style: italic;
+            text-decoration: none;
+            border-radius: 47px;
+            border: 2px solid wheat;
+            background-color: seagreen;
+        }
+
+        input[type='email'] {
+            color: black;
+            border: 2px solid rgb(11, 189, 41);
+            /* background-color: seagreen; */
+        }
+
+        input[type='password'] {
+            color: black;
+            border: 2px solid rgb(109, 75, 231);
+            /* background-color: seagreen; */
+        }
+
+        input[type='text'] {
+            color: black;
+            border: 2px solid rgb(16, 36, 209);
+            /* background-color:darkcyan; */
+        }
+
+        input[type='Submit'] {
+            background-color: blue;
+            margin: 7px 4px;
+            padding: 4px;
+            border: 2px solid black;
+            border-radius: 65px;
+        }
+
+        input[type='Submit']:hover {
+            background-color: seagreen;
+        }
+
+
+        /* This is Css for third child */
+
+        li:nth-child(3) {
+            color: cyan;
+        }
+
+        /* This is Css for every second child */
+        li:nth-child(2n+0) {
+            color: seagreen;
+        }
+
+        /*This is Css for every Third child */
+        li:nth-child(3n+3) {
+            color: chartreuse
+        }
+
+        /* for odd childs */
+        li:nth-child(odd) {
+            background-color: aqua;
+        }
+
+        /* for even childs */
+        li:nth-child(even) {
+            background-color: lightseagreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1><a href="http://google.com" target="_blank">Go to Google</a></h1>
+        <h1><a href="http://facebook.com" target="_self">Go to facebook</a></h1>
+        <form action="" class="form-control">
+            <input type="text" placeholder="Enter your Name">
+            <input type="email" placeholder="Enter Your Email">
+            <input type="password" placeholder="Enter your Password">
+            <input type="Submit" value="Submit">
+        </form>
+        <ul>
+            <li class="item" id="item1">item1</li>
+            <li class="item" id="item2">item2</li>
+            <li class="item" id="item3">item3</li>
+            <li class="item" id="item4">item4</li>
+            <li class="item" id="item5">item5</li>
+            <li class="item" id="item6">item6</li>
+            <li class="item" id="item7">item7</li>
+            <li class="item" id="item8">item8</li>
+            <li class="item" id="item9">item9</li>
+            <li class="item" id="item10">item10</li>
+        </ul>
+    </div>
+</body>
+
+</html>

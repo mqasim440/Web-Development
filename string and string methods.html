@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documment</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="content"></div>
+        <div class="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum neque quibusdam alias tenetur
+            harum facilis ab, dolor tempora possimus minima magnam laudantium commodi quia incidunt et eius ipsum in.
+            Possimus iste ipsam eveniet.
+        </div>
+    </div>
+    <script>
+        var string = "this"; //used when '' is needed to use in ""
+        // var string = 'this'; //used when  "" is needed to use in ''
+        //  var name = "Qasim";//or
+        var name = 'Qasim';
+        var channel = "Dunya se dore";
+        var message = "Qasim is a good boy.";
+        console.log(string + name + message);
+        var temp = `${name} is a 'nice' person "and" he has a channel ${channel}.`;//``is used when we have to use "" and '' at a time in any line
+        console.log(temp);
+
+        var len=name.length;
+        console.log(`Length of name is ${len}.`);
+
+         console.log("Hello World\nHarry");//for new line we use(\n,\\n,\t,\b)
+
+        //  var y=new string("This");
+        //  console.log(y);
+
+        document.getElementById('content').innerHTML='<h3>This is an h3 Heading.</h3>'
+
+    </script>
+
+</body>
+
+</html>

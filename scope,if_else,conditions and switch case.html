@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java script /scope,IF-ELSE condition and switch case</title>
+</head>
+
+<body>
+    <div class="contanier">
+        This is container.
+    </div>
+    <script>
+        // var string1="This a string";//The Data type var coul;d be override.
+        var string1 = "THis is a string 1."
+        console.log(string1);
+        //  let is used for block elements but its value outoff block does'nt work
+        let a = "U";
+        {
+            let a = "ur";
+            // console.log(a);//this will show the value of a which is in block
+        }
+        // console.log(a);//this will show value of a which is out of block
+
+        //const
+        const b = "This can not be changed.";//its value can not be changed anywhere in program by over riding
+        // const b="I want to change this";//it will not work
+        console.log(b);
+
+        //If-Else condition
+
+        let age = 18;
+        if (age > 18) {
+            console.log("You can Drink.");
+        }
+        else if (age == 2) {
+            console.log("You can not drink.");
+        }
+        else {
+            console.log("You can drink cold drink.");
+        }
+
+        //switch case
+
+        const cups = 42;
+        switch (cups) {
+            case 4:
+                console.log("The value of cups is 4.");
+                break;
+            case 41:
+                console.log("The value of cups is 41.");
+                break;
+            case 42:
+                console.log("The value of cups is 42.");
+                break;
+            case 45:
+                console.log("The value eof cups is 45.");
+                break;
+            default:
+                console.log("The value of cups does not match.");
+                break;
+        }
+
+
+
+    </script>
+</body>
+
+</html>

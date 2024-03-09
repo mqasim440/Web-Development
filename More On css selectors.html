@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on Css</title>
+    <style>
+        h1{
+            background-color: red;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+        }
+        /* for <li class="item"><p>This is Another paragraph inside li</p></li> inside li inside the div*/
+        /* div li p{
+            color: yellow;
+            background-color: green;
+            font-weight: bold;
+
+        } */
+        /* for all p inside the div */
+        /* div p{
+            color: brown;
+            background-color: blue;
+            font-weight: bold;
+        } */
+
+        /* div >p will apply css only on p which is right/directed inside div */
+/* 
+        div >p{
+            color: brown;
+            background-color: cadetblue;
+            font-weight: bold;
+        } */
+
+        /* div + p will aplly css on p which right after div */
+
+        div + p{
+            color: coral;
+            background-color: seagreen;
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>This is More on selectors</h1>
+    <div class="container">
+        <div class="now">
+            <ul>
+                <li class="item"><p>This is Another paragraph inside li</p></li>
+                <li>This will not get affected</li>
+                <p>this is paragraph indside ul</p>
+            </ul>
+            <p>This is PAragraph </p>
+        </div>
+        <p>This is Another paragraph</p>
+    </div>
+    <p>This is outermost paragraph</p>
+    
+</body>
+</html>

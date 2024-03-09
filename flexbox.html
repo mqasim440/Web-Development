@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Tutorial</title>
+    <style>
+        .container {
+            height: 444px;
+            width: 100%;
+            border: 2px solid red;
+            display: flex;
+            /* initialize the container as felxbox*/
+            /*flex properties for the flex container*/
+            
+            flex-direction: row;/* Default*/
+            /*flex-direction: column; 
+            flex-direction: row-reverse;
+            flex-direction: column-reverse;*/
+
+
+            /* flex-wrap: wrap; 
+            flex-wrap: wrap-reverse;*/
+
+
+            /* This is shorthand for the flex direction and flex-wrap:        
+                flex-flow:row-reverse wrap;*/
+            /* 
+                justify content will justify the content in horizontal direction */
+
+            /* justify-content:center; for take elements in center */
+            /* justify-content: space-between; for equal space only between elements */
+            /* justify-content: space-around; for equal space across elements */
+            /* justify-content: space-evenly; for equal space between elements and across elements*/
+
+            /* align-item will align the content in vertical line */
+
+            /* align-items: center;
+                align-items: flex-end;
+                align-items: flex-start; */
+            /* align-items: stretch; */
+
+
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: tomato;
+            border: 2px solid green;
+            margin: 10px;
+            padding: 1px;
+        }
+
+        #box-1 {
+
+            /* flex properties for flex item */
+            /* order: 2; whos order is maximum taht wil be shown at the end means higher the order ,later it will be shown in container*/
+            
+             flex-grow: 3;/* for growth/increase of width */
+             flex-shrink: 5;/* to shrink the width of box or item */
+
+        }
+        #box-2{
+            /* flex-basis: 160px; */
+           
+             /* when flex-direction: is set to  row flex-basis: will control width of item; */
+              /* when flex-direction: is set to  column flex-basis: will control hieght of item; */
+
+              /* shorthand for all flex is as flex: flex-grow  flex-shrink flex-basis; as  */
+              /* flex: 2 2 230px; */
+
+              /* align-self is used to align any specific element or item in container at specific place */
+
+              /* align-self: center;
+              align-self: flex-end; */
+              align-self: flex-start;
+              
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This is Felxbox Tutorial</h1>
+    <div class="container">
+        <div class="box" id="box-1">First</div>
+        <div class="box" id="box-2">Second</div>
+        <div class="box" id="box-3">Third</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS POSITIONS</title>
+    <style>
+        .container {
+            background-color: khaki;
+            border: 2px solid seagreen;
+            height: 2223px;
+        }
+
+        .box {
+            border: 2px solid red;
+            width: 134px;
+            height: 134px;
+            margin: 2px;
+            display: inline-block;
+        }
+
+        /* CSS Positions:static(default),relative,fixed,sticky */
+        /* ==================================================== */
+        /* ==================================================== */
+        #box3 {
+            /* relative:position of element relative to its normal position and will leave a gap at its normal position */
+            /*position: relative;
+            top: 34px;
+            left:25px; */
+            /* ================ */
+
+            /* absolute:positions the element relative to its first parent  */
+            /* position:absolute;
+            right: 3px; */
+            /* ============= */
+            /* fixed:position the element relative to the browser window means it fixed the position permanenetly even if the scrolling is done */
+             /* position: fixed;
+             bottom/right: 4px; */
+             /* =============== */
+             /* sticky:position the element at  its normal value in such a way that the sticky element will not scroll from it's given position */
+             position: sticky;
+             top: 3px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3 contact with us</div>
+        <div class="box" id="box4">4</div>
+
+    </div>
+</body>
+
+</html>
