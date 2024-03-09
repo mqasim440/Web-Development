@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    div {
+      display: inline-block;
+      margin-left: 20px;
+      background-color: cornflowerblue;
+      width: 20px;
+      border: 1px solid black;
+      border-radius: 5px;
+    }
+
+    #username {
+      margin-left: 50px;
+    }
+  </style>
+  <script>
+    function myfun(action) {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      if (username.length === 0 || (action === 'login' && (password.length === 0))) {
+        document.getElementById("myspan").innerHTML = "*Please fill in all fields.";
+        document.getElementById("searchresult").innerHTML = "";
+        return;
+      }
+
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          if (action === 'search') {
+            document.getElementById("searchresult").innerHTML = this.responseText;
+          }
+          else if (action === 'clear') {
+            document.getElementById("username").value = '';
+            document.getElementById("password").value = '';
+            document.getElementById("myspan").innerHTML = "";
+            document.getElementById("searchresult").innerHTML = "";
+          }
+          else if (action === 'login') {
+            document.getElementById("myspan").innerHTML = this.responseText;
+          }
+          else
+          {
+
+          }
+        }
+      };
+
+      xmlhttp.open("GET", "Loginajaxdb.php?action=" + action + "&username=" + username + "&password=" + password, true);
+      xmlhttp.send();
+    }
+  </script>
+</head>
+
+<body>
+  <center>
+    <h1>Login AJAX</h1>
+    Username:<input type="username" id="username" onkeyup="myfun('search')">
+    <div id="searchresult"></div>
+    <br>
+    Password: <input type="text" id="password"><br>
+    <br>
+    <button onclick="myfun('login')">Login</button>
+    <button onclick="myfun('clear')">CLEAR</button>
+    <br>
+    <span id="myspan"></span>
+  </center>
+</body>
+
+</html>

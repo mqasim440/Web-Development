@@ -1,0 +1,42 @@
+<html>
+  <head>
+  <script>
+    function myfun(str){
+	if (str.length == 0){
+	document.getElementById("myspan").innerHTML ="";
+	return;
+	}
+	
+    var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function (){
+	if (this.readyState == 4 && this.status == 200)
+	 document.getElementById("myspan").innerHTML = this.responseText;
+	};
+	xmlhttp.open("GET","Searchajaxdb.php?q="+str,true);
+	xmlhttp.send();
+
+
+	}
+  
+  </script>
+  
+  
+  </head>
+  <body>
+  <center>
+  <h1> Search AJAX </h1>
+    Rollno: <input type="text" onkeyup="myfun(this.value)"><br>
+	<br>
+	<span id="myspan">
+	</span>
+  </center>	
+  </body>
+</html>
+
+
+
+
+
+
+
+

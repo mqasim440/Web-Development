@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    function myfun(action) {
+      var rollno = document.getElementById("rollno").value;
+      var name = document.getElementById("name").value;
+      var marks = document.getElementById("marks").value;
+
+      if (rollno.length === 0 || (action === 'insert' && (name.length === 0 || marks.length === 0))) {
+        document.getElementById("myspan").innerHTML = "*Please fill in all fields.";
+        return;
+      }
+
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("myspan").innerHTML = this.responseText;
+          if (action === 'clear') {
+            // Clear input fields after successful insert
+            document.getElementById("rollno").value = '';
+            document.getElementById("name").value = '';
+            document.getElementById("marks").value = '';
+            document.getElementById("myspan").innerHTML = "";
+          }
+        }
+      };
+
+      xmlhttp.open("GET", "Insertajaxdb.php?action=" + action + "&rollno=" + rollno + "&name=" + name + "&marks=" + marks, true);
+      xmlhttp.send();
+    }
+  </script>
+</head>
+<body>
+  <center>
+    <h1>Insert AJAX</h1>
+    Rollno: <input type="text" id="rollno" onkeyup="myfun('search')"><br>
+    Name: <input type="text" id="name"><br>
+    Marks: <input type="text" id="marks"><br>
+    <br>
+    <button onclick="myfun('insert')">ADD</button>
+    <button onclick="myfun('clear')">CLEAR</button>
+    <br>
+    <span id="myspan"></span>
+  </center>
+</body>
+</html>

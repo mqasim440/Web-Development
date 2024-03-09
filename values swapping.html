@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Swapper</title>
+    <style>
+        .container {
+            margin: auto;
+            width: 20%;
+            background-color: #fff;
+            border: 2px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        .input-container {
+            margin: 20px 0;
+        }
+
+        label {
+            font-size: 18px;
+        }
+
+        input {
+            width: 60px;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body bgcolor="#333">
+    <div class="container">
+        <h1>Number Swapper</h1>
+        <div class="input-container">
+            <label for="number1">Number 1:</label>
+            <input type="number" id="number1">
+        </div>
+        <div class="input-container">
+            <label for="number2">Number 2:</label>
+            <input type="number" id="number2">
+        </div>
+        <div class="input-container">
+            <label for="number3">Number 3:</label>
+            <input type="number" id="number3">
+        </div>
+        <div class="input-container">
+            <label for="interval">Interval (seconds):</label>
+            <input type="number" id="Interval">
+        </div>
+        <button id="startswap">Start</button>
+        <button id="stopswap">Stop</button>
+    </div>
+
+    <script>
+        let swapping = false;
+        let intervalId;
+
+        function swap() {
+            let number1 = document.getElementById("number1").value;
+            let number2 = document.getElementById("number2").value;
+            let number3 = document.getElementById("number3").value;
+            let inter = parseInt(document.getElementById("Interval").value) * 1000;
+
+            document.getElementById("number1").value = number3;
+            document.getElementById("number2").value = number1;
+            document.getElementById("number3").value = number2;
+
+            // Clear the previous interval and start a new one
+            clearInterval(intervalId);
+            if (swapping) {
+                intervalId = setInterval(swap, inter);
+            }
+        }
+
+        document.getElementById("startswap").addEventListener("click", () => {
+            if (!swapping) {
+                swapping = true;
+                intervalId = setInterval(swap, parseInt(document.getElementById("Interval").value) * 1000);
+            }
+        });
+
+        document.getElementById("stopswap").addEventListener("click", () => {
+            if (swapping) {
+                swapping = false;
+                clearInterval(intervalId);
+            }
+        });
+    </script>
+</body>
+
+</html>

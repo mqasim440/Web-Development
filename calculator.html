@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .calculator {
+            background-color: #fff;
+            border: 2px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        .input-container {
+            margin: 20px 0;
+            padding-right: 20px;
+        }
+        input[type="number"], input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .operation-buttons {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body bgcolor="#333">
+    <div class="calculator">
+        <h1>Calculator</h1>
+        <div class="input-container">
+            Number 1 <input type="number" id="number1"><br>
+            Number 2 <input type="number" id="number2"><br>
+            Number 3 <input type="number" id="number3"><br>
+            Result   <input type="text" id="Result" readonly><br>
+        </div>
+        <div class="operation-buttons">
+            <button onclick="addition()"> + </button>
+            <button onclick="subtraction()"> - </button>
+            <button onclick="multiplication()"> * </button>
+            <button onclick="division()"> / </button>
+        </div>
+    </div>
+
+    <script>
+        function addition() {
+            const number1 = parseFloat(document.getElementById("number1").value);
+            const number2 = parseFloat(document.getElementById("number2").value);
+            const number3 = parseFloat(document.getElementById("number3").value);
+            const result = number1 + number2 + number3;
+            document.getElementById("Result").value = result;
+        }
+
+        function subtraction() {
+            const number1 = parseFloat(document.getElementById("number1").value);
+            const number2 = parseFloat(document.getElementById("number2").value);
+            const number3 = parseFloat(document.getElementById("number3").value);
+
+            const result = number1 - number2 - number3;
+            document.getElementById("Result").value = result;
+        }
+
+        function multiplication() {
+            const number1 = parseFloat(document.getElementById("number1").value);
+            const number2 = parseFloat(document.getElementById("number2").value);
+            const number3 = parseFloat(document.getElementById("number3").value);
+
+            const result = number1 * number2 * number3;
+            document.getElementById("Result").value = result;
+        }
+
+        function division() {
+            const number1 = parseFloat(document.getElementById("number1").value);
+            const number2 = parseFloat(document.getElementById("number2").value);
+            const number3 = parseFloat(document.getElementById("number3").value);
+
+            if (number2 !== 0 || number3!==0) {
+                const result = number1 / number2 / number3;
+                document.getElementById("Result").value = result;
+            } else {
+                document.getElementById("Result").value = "Division by zero is not allowed.";
+            }
+        }
+    </script>
+</body>
+</html>

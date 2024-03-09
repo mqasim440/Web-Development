@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    function myfun(action) {
+      var rollno = document.getElementById("rollno").value;
+      var marks = document.getElementById("marks").value;
+
+      if ((rollno.length === 0 ||  marks.length === 0) && action === 'update'){
+        document.getElementById("myspan").innerHTML = "*Please fill in all fields.";
+        return;
+      }
+      if(rollno.length===0 && action==='search'){
+        document.getElementById("myspan").innerHTML = "";
+        return;
+
+      }
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("myspan").innerHTML = this.responseText;
+          if (action === 'clear') {
+            // Clear all fields 
+            document.getElementById("rollno").value = '';
+            document.getElementById("marks").value = '';
+           document.getElementById("myspan").innerHTML = "";
+
+          }
+        }
+      };
+
+      xmlhttp.open("GET", "Updateajaxdb.php?action=" + action + "&rollno=" + rollno  + "&marks=" + marks, true);
+      xmlhttp.send();
+    }
+  </script>
+</head>
+<body>
+  <center>
+    <h1>Update AJAX</h1>
+    Rollno: <input type="text" id="rollno" onkeyup="myfun('search')"><br>
+    Marks: <input type="text" id="marks"><br>
+    <br>
+    <button onclick="myfun('update')">UDATE</button>
+    <button onclick="myfun('clear')">CLEAR</button><br>
+    <span id="myspan"></span><br>
+
+  </center>
+</body>
+</html>

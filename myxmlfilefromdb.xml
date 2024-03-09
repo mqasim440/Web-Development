@@ -1,0 +1,28 @@
+<?xml version='1.0' ?>
+<bscs5>
+	<stu>
+		<rollno>2</rollno>
+		<name>Anwar</name>
+		<marks>51</marks>
+	</stu>
+	<stu>
+		<rollno>3</rollno>
+		<name>Rimsha</name>
+		<marks>75</marks>
+	</stu>
+	<stu>
+		<rollno>4</rollno>
+		<name>Ahmad</name>
+		<marks>76</marks>
+	</stu>
+	<stu>
+		<rollno>6</rollno>
+		<name>Affan</name>
+		<marks>82</marks>
+	</stu>
+	<stu>
+		<rollno>9</rollno>
+		<name>Shujaat</name>
+		<marks>50</marks>
+	</stu>
+</bscs5>
